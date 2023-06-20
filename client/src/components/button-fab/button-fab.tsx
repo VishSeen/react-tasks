@@ -5,7 +5,7 @@ type FabBtnProps = {
     icon: string;
     className?: string;
     type?: string;
-    clickEvent: () => void;
+    clickEvent: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const BtnFab: React.FC<FabBtnProps> = ({

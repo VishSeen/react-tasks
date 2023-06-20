@@ -1,15 +1,17 @@
 import { styled } from "styled-components";
-import { BtnProps } from "../form/btn-signin";
+
 
 type FabBtnProps = {
     icon: string;
     className?: string;
+    type?: string;
     clickEvent: () => void;
 }
 
 const BtnFab: React.FC<FabBtnProps> = ({
     icon,
     className,
+    type,
     clickEvent
 }) => {
     return (
@@ -24,23 +26,46 @@ const BtnFab: React.FC<FabBtnProps> = ({
 }
 
 
-const StyledWrapper = styled.div<{ className?: string }>`
 
-.btn-fab {
+// ------------------------------------------------------------------------------- //
+
+const StyledWrapper = styled.div<{ className?: string }>`
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+
+  @media screen and (min-width: 992px) {
+    bottom: 2rem;
+    right: 2rem;
+  }
+
+  .btn-fab {
+    height: 50px;
+    width: 50px;
     display: flex;
-    background-color: #F9D949;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffd646;
     border: none;
     border-radius: 50%;
-    padding: 10px;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 
-    :hover {
-        cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      background-color: #dcc03e;
     }
-}
 
-.btn-fab span {
+    @media screen and (min-width: 992px) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .btn-fab span {
     color: white;
-}
+  }
 `;
 
 

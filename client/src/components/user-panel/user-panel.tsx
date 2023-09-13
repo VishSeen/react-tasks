@@ -1,77 +1,46 @@
-import { styled } from "styled-components";
-
-type Image = {
-    src: string;
-    alt: string;
-}
-
-type UserProps = {
-    name: string;
-    image: Image;
-    clickEvent: (event: React.MouseEvent<HTMLDivElement>) => void;
-}
+import { useLayoutEffect, useState } from "react";
+import { UserPanelProps } from "../../types/ComponentProps";
+import StyledWrapper from "./user-panel.style";
 
 
-const UserPanel: React.FC<UserProps> = ({
+
+const UserPanel: React.FC<UserPanelProps> = ({
     name,
-    image,
-    clickEvent
+    image
 }) => {
+    const [panelVisible, setPanelVisible] = useState<boolean>(false);
+
+    const userPanelClicked = (): void => {
+        if(panelVisible) {
+            setPanelVisible(false)
+        } else {
+            setPanelVisible(true);
+        }
+    }
+
     return (
-        <StyledWrapper className="user-panel-wrapper">
-            <div className="user-panel" onClick={clickEvent}>
-                <div className="user-name">
+        <StyledWrapper $primary className="user-panel-wrapper">
+            <div className="user-panel" onClick={userPanelClicked}>
+                <div className="user-panel__user-name">
                     <p>
                         {name}
                     </p>
+
+                    <span className="material-icons">expand_more</span>
                 </div>
 
-                <div className="user-profile-image">
-                    <img src={image.src} alt={image.alt} />
+                <div className="user-panel__user-profile-image">
+                    <img src={image.src} alt={image.altText} />
                 </div>
+            </div>
+
+            <div className={`user-info-panel ${panelVisible ? 'visible' : 'none'}`}>
+                <p>hell</p>
             </div>
         </StyledWrapper>
     );
 }
 
-
-
-const StyledWrapper = styled.div`
-
-
-    .user-panel {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-
-    .user-panel .user-name {
-        margin-right: 14px;
-
-        p {
-            font-weight: 600;
-        }
-    }
-
-
-    .user-panel .user-profile-image {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-`;
 
 
 export default UserPanel;

@@ -1,27 +1,47 @@
-import React from 'react';
-import './App.css';
+import React, { useState } from 'react';
+import './assets/styles/global.scss';
 import SearchBar from './components/search-bar/search-bar';
 import BtnFab from './components/button-fab/button-fab';
 import UserPanel from './components/user-panel/user-panel';
+import NavBar from './components/nav-bar/nav-bar';
+import Logo from './components/logo/logo';
+import { Theme } from './types/Types';
+import { ThemeProvider } from 'styled-components';
+import StyledApp from './App.style';
+import { lightTheme, darkTheme, GlobalStyle } from './assets/styles/theme';
+
+
+
 
 
 function App() {
-    const click = () => console.log("Test");
+    const [theme, setTheme] = useState<boolean>(true);
+    const click = () => setTheme(!theme);
 
     const image = {
         src: "https://cdn.wallpapersafari.com/38/11/2WqNdH.jpg",
-        alt: "Name"
+        altText: "Name"
     }
 
 
     return (
-        <div className="App">
-            <SearchBar searchHandler={click} />
+        <ThemeProvider theme={theme ? lightTheme : darkTheme} >
+            <GlobalStyle />
 
-            <UserPanel name="Vishroy Seenarain" image={image} clickEvent={click} />
+            <StyledApp className="App">
+                <NavBar />
 
-            <BtnFab icon="edit" clickEvent={click} />
-        </div>
+                <div className="main-wrapper">
+                    <div className="main-wrapper__top-bar">
+                        <SearchBar searchHandler={click} />
+
+                        <UserPanel name="Vishroy Seenarain" image={image} />
+                    </div>
+                </div>
+
+                <BtnFab />
+            </StyledApp>
+        </ThemeProvider>
     );
 }
 

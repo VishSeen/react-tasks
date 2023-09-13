@@ -26,7 +26,7 @@ const BtnSearch: React.FC<BtnSearchProps> = ({
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
-    title = "Search here ..",
+    title = "Search here .. ",
     searchHandler
 }) => {
     return (
@@ -46,7 +46,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 const StyledWrapper = styled.div<{ className?: string }>`
     background: #F1F6F9;
     width: 35rem;
-    height: 50px;
+    height: 45px;
     display: flex;
     align-items: center;
     padding: 0 20px 0 10px;
@@ -83,11 +83,14 @@ const StyledWrapper = styled.div<{ className?: string }>`
         height: 100%;
         width: 100%;
         outline-width: 0px;
-        font-size: 16px;
+        font-size: 14px;
         font-family: 'Poppins', sans-serif;
-
         :focus-visible {
             outline-width: 0px;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 14px;
         }
     }
 `;

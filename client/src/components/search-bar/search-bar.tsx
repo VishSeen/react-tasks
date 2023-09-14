@@ -55,6 +55,7 @@ const StyledWrapper = styled.div<{ className?: string }>`
     .btn__search-bar button {
         border: none;
         color: #323232;
+        opacity: 0.5;
         background-color: transparent;
         display: flex;
         justify-content: center;

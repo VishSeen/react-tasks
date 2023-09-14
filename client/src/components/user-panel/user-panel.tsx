@@ -19,7 +19,7 @@ const UserPanel: React.FC<UserPanelProps> = ({
     }
 
     return (
-        <StyledWrapper $primary className="user-panel-wrapper">
+        <StyledWrapper $primary className={`user-panel-wrapper ${panelVisible ? 'visible' : 'none'}`}>
             <div className="user-panel" onClick={userPanelClicked}>
                 <div className="user-panel__user-name">
                     <p>

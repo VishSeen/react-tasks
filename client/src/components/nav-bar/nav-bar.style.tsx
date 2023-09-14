@@ -6,7 +6,7 @@ const StyledNav = styled.div`
     left: 1rem;
     bottom: 1rem;
     width: 257px;
-    padding: 20px;
+    padding: 35px 20px;
     background-color: #323232;
     border-radius: 19px;
     z-index: 10;

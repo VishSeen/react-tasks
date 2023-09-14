@@ -21,7 +21,12 @@ button {
     background-color: transparent;
     border: none;
 
-    :hover {
+    &:hover {
         cursor: pointer;
     }
+}
+
+
+li {
+    list-style: none;
 }

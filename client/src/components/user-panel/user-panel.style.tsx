@@ -5,17 +5,30 @@ const StyledWrapper = styled.div<{
     $primary?: boolean;
 }>`
     &.user-panel-wrapper {
-        background-color: #F1F6F9;
-        border-radius: 45px;
         padding: 4px;
         position: relative;
+        width: 237px;
+        height: 50px;
+        transition: 0.1s ease-in all;
+        &:hover {
+            border-radius: 45px;
+            background-color: #F1F6F9;
+
+        }
+
+        &.visible {
+            border-radius: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: #F1F6F9;
+        }
     }
+
 
     .user-panel {
         display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
+        align-items: center;
+        justify-content: flex-end;
 
         &:hover {
             cursor: pointer;
@@ -25,7 +38,6 @@ const StyledWrapper = styled.div<{
             }
         }
     }
-
 
     .user-panel__user-name {
         margin-right: 14px;
@@ -41,7 +53,7 @@ const StyledWrapper = styled.div<{
 
         p {
             color: #323232;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 14px;
             font-style: normal;
             line-height: normal;
@@ -52,11 +64,10 @@ const StyledWrapper = styled.div<{
         }
     }
 
-
     .user-panel__user-profile-image {
         border-radius: 50%;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         overflow: hidden;
 
         img {
@@ -69,15 +80,15 @@ const StyledWrapper = styled.div<{
 
     .user-info-panel {
         position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 68px;
-    right: 0;
-
-        border-radius: 7px;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        right: 0;
         padding: 10px;
         background-color: #F1F6F9;
-        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
         &.visible {
             display: block;
         }

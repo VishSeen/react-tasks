@@ -16,3 +16,9 @@ export type Theme = {
     backgroundColor: string;
     accentColor: string;
 }
+
+export type NavMenuItem = {
+    title: string;
+    icon?: string;
+    url: string;
+}

@@ -1,4 +1,4 @@
-import {Image} from './Types';
+import {Image, NavMenuItem } from './Types';
 
 
 
@@ -22,3 +22,15 @@ export type LogoProps = {
     url?: string;
     className?: string;
 }
+
+
+export type NavBarProps = {
+    className?: string;
+}
+
+export type NavBarMenuProps = {
+    className?: string;
+    menuItems: NavMenuItem[];
+    isNavLinks: boolean;
+}
+

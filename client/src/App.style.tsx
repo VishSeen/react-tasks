@@ -7,13 +7,14 @@ const StyledApp = styled.div<{
 }>`
     .main-wrapper {
         padding-left: 286px;
-        padding-top: 12px;
+        padding-top: 27px;
     }
 
     .main-wrapper__top-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 18px;
     }
 
     .main-wrapper__top-bar__right {

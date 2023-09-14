@@ -18,7 +18,7 @@ const BtnSearch: React.FC<BtnSearchProps> = ({
 }) => {
     return (
         <button onClick={clickEvent}>
-            <span className="material-icons">
+            <span className="material-symbols-rounded">
                 {icon}
             </span>
         </button>

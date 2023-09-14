@@ -22,7 +22,7 @@ const NavBarMenu: FunctionComponent<NavBarMenuProps> = ({
                                         <NavLink to={item.url}>
                                             {
                                                 item.icon && (
-                                                    <span className="material-icons">
+                                                    <span className="material-symbols-rounded">
                                                         {item.icon}
                                                     </span>
                                                 )
@@ -33,7 +33,7 @@ const NavBarMenu: FunctionComponent<NavBarMenuProps> = ({
                                         <a href={item.url}>
                                                 {
                                                     item.icon && (
-                                                        <span className="material-icons">
+                                                        <span className="material-symbols-rounded">
                                                             {item.icon}
                                                         </span>
                                                     )

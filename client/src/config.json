@@ -1,0 +1,25 @@
+{
+    "app-title": "tasks",
+    "nav-bar-items":[
+        {
+        "title": "Home",
+        "icon": "home",
+        "url": "/"
+        },
+        {
+        "title": "Todo",
+        "icon": "check_box",
+        "url": "todos"
+        },
+        {
+        "title": "Reminders",
+        "icon": "today",
+        "url": "reminders"
+        },
+        {
+        "title": "Notes",
+        "icon": "note",
+        "url": "notes"
+        }
+    ]
+}

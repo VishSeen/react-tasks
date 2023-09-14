@@ -41,7 +41,6 @@ const StyledWrapper = styled.div<{
 
     .user-panel__user-name {
         margin-right: 14px;
-        display: none;
         opacity: 0.7;
         transition: 0.3s ease-in-out all;
 

@@ -9,6 +9,8 @@ import StyledApp from './App.style';
 import { lightTheme, darkTheme, GlobalStyle } from './assets/styles/theme';
 import Homepage from './pages/home/homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import config from '../src/config.json';
+
 
 
 
@@ -32,25 +34,25 @@ function App() {
 
             <StyledApp className="App">
                 <div className="main-wrapper">
-                    <div className="main-wrapper__top-bar">
-                        <SearchBar searchHandler={click} />
-
-                        <div className="main-wrapper__top-bar__right">
-                            <UserPanel name="Vishroy Seenarain" image={image} />
-
-                            <button className="btn-theme" title='Switch theme' onClick={() => setTheme(!theme)}>
-                                <span className="material-icons">{theme ? 'dark_mode' : 'light_mode'}</span>
-                            </button>
-                        </div>
-                    </div>
-
-
                     <BrowserRouter>
+                        <div className="main-wrapper__top-bar">
+                            <SearchBar searchHandler={click} />
+
+                            <div className="main-wrapper__top-bar__right">
+                                <UserPanel name="Vishroy Seenarain" image={image} />
+
+                                <button className="btn-theme" title='Switch theme' onClick={() => setTheme(!theme)}>
+                                    <span className="material-symbols-rounded">{theme ? 'dark_mode' : 'light_mode'}</span>
+                                </button>
+                            </div>
+                        </div>
                         <NavBar />
 
                         <Routes>
-                            <Route index element={<Homepage />} />
-                            <Route path='notes' element={<Homepage />} />
+                            <Route index element={<Homepage title="Dashboard"/>} />
+                            <Route path={config['nav-bar-items'][1]['url']} element={<Homepage title="Todo" />} />
+                            <Route path={config['nav-bar-items'][2]['url']} element={<Homepage title="Reminders" />} />
+                            <Route path={config['nav-bar-items'][3]['url']} element={<Homepage title="Notes" />} />
                         </Routes>
                     </BrowserRouter>
                 </div>

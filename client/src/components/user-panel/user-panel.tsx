@@ -26,7 +26,7 @@ const UserPanel: React.FC<UserPanelProps> = ({
                         {name}
                     </p>
 
-                    <span className="material-icons">expand_more</span>
+                    <span className="material-symbols-rounded">expand_more</span>
                 </div>
 
                 <div className="user-panel__user-profile-image">

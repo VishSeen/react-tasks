@@ -21,7 +21,7 @@ const BtnFab: FunctionComponent<FabBtnProps> = ({
     return (
         <StyledWrapper className={['btn-fab-wrapper' , className].join(' ')}>
             <button className="btn-fab" onClick={onClick}>
-                <span className={`material-icons ${fabClicked ? 'rotate' : ''}`}>
+                <span className={`material-symbols-rounded ${fabClicked ? 'rotate' : ''}`}>
                     {icon}
                 </span>
             </button>

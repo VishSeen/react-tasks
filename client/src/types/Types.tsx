@@ -1,4 +1,8 @@
 
+export type Page = {
+    title: string;
+    contents?: HTMLDivElement;
+}
 
 export type Image = {
     src: string;

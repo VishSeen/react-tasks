@@ -4,12 +4,13 @@ import Logo from "../logo/logo";
 import StyledNav from "./nav-bar.style";
 import NavBarMenu from "../nav-bar-menu/nav-bar-menu";
 import { NavBarProps } from "../../types/ComponentProps";
+import config from '../../config.json';
 
 
 const navMenu = [
     {
         title: 'Home',
-        icon: 'home_filled',
+        icon: 'home',
         url: '/'
     },
     {
@@ -19,12 +20,12 @@ const navMenu = [
     },
     {
         title: 'Reminder',
-        icon: 'event_note',
+        icon: 'today',
         url: 'reminders'
     },
     {
         title: 'Notes',
-        icon: 'border_color',
+        icon: 'note',
         url: 'notes'
     }
 ]
@@ -40,13 +41,13 @@ const NavBar: FunctionComponent<NavBarProps> = ({
             <div className={`${['nav-bar', className].join(' ')}`}>
                 <div className="nav-bar__top-bar">
                     <button className="btn-nav" onClick={() => setOpened(!opened)}>
-                        <span className="material-icons">notes</span>
+                        <span className="material-symbols-rounded">notes</span>
                     </button>
                     <Logo text="tasks" className={opened ? '' : 'dark'}/>
                 </div>
 
                 <div className="nav-bar__center-bar">
-                    <NavBarMenu menuItems={navMenu} isNavLinks={true} />
+                    <NavBarMenu menuItems={config["nav-bar-items"]} isNavLinks={true} />
                 </div>
             </div>
         </StyledNav>

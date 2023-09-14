@@ -23,11 +23,21 @@ const StyledNavBarMenu = styled.nav<{
             &.active {
                 color: ${props => props.theme.accentColor};
                 background-color: #ffffff12;
+
+                .material-symbols-rounded {
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+                }
             }
 
             span {
                 font-size: 18px;
                 margin-right: 16px;
+                margin-bottom: 1px;
+                transition: 0.1s ease-in all;
             }
         }
     }

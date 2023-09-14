@@ -1,9 +1,12 @@
 import { FunctionComponent } from "react";
+import { Page } from "../../types/Types";
 
-const Homepage: FunctionComponent = () => {
+const Homepage: FunctionComponent<Page> = ({
+    title
+}) => {
     return(
         <>
-            <h1>Homepage</h1>
+            <h1>{title}</h1>
         </>
     )
 }

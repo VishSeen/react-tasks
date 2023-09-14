@@ -1,4 +1,4 @@
-import {styled} from 'styled-components';
+import { styled } from 'styled-components';
 
 
 const StyledNavBarMenu = styled.nav<{
@@ -19,12 +19,11 @@ const StyledNavBarMenu = styled.nav<{
             padding: 10px;
             border-radius: 4px;
             transition: 0.3s ease-in all;
+            &:hover {
+                    color: ${props => props.theme.accentColor};
 
-            &.active {
-                color: ${props => props.theme.accentColor};
-                background-color: #ffffff12;
-
-                .material-symbols-rounded {
+                span.material-symbols-rounded {
+                    color: ${props => props.theme.accentColor};
                     font-variation-settings:
                     'FILL' 1,
                     'wght' 400,
@@ -33,11 +32,25 @@ const StyledNavBarMenu = styled.nav<{
                 }
             }
 
-            span {
+            &.active {
+                color: ${props => props.theme.accentColor};
+                background-color: #ffffff12;
+
+                span.material-symbols-rounded {
+                    color: ${props => props.theme.accentColor};
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 400,
+                    'GRAD' 0,
+                    'opsz' 24
+                }
+            }
+
+            span.material-symbols-rounded {
                 font-size: 18px;
                 margin-right: 16px;
                 margin-bottom: 1px;
-                transition: 0.1s ease-in all;
+                transition: 0.2s ease-in-out all;
             }
         }
     }

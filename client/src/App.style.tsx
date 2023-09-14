@@ -25,12 +25,16 @@ const StyledApp = styled.div<{
             width: 45px;
             height: 45px;
             border-radius: 50%;
-            background-color: #eff4f7;
-            color: #323232;
+            background-color: ${props => props.theme.backgroundSearchColor};
+            color: ${props => props.theme.textColor};
             display: flex;
             align-items: center;
             justify-content: center;
             margin-left: 10px;
+
+            span {
+                color: ${props => props.theme.textColor};
+            }
         }
     }
 `;

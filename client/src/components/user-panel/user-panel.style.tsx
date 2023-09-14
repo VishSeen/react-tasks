@@ -12,7 +12,7 @@ const StyledWrapper = styled.div<{
         transition: 0.1s ease-in all;
         &:hover {
             border-radius: 45px;
-            background-color: #F1F6F9;
+            background-color: ${props => props.theme.backgroundSearchColor};
 
         }
 
@@ -20,7 +20,7 @@ const StyledWrapper = styled.div<{
             border-radius: 20px;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
-            background-color: #F1F6F9;
+            background-color: ${props => props.theme.backgroundSearchColor};
         }
     }
 
@@ -51,7 +51,7 @@ const StyledWrapper = styled.div<{
         }
 
         p {
-            color: #323232;
+            color: ${props => props.theme.textColor};
             font-weight: 500;
             font-size: 14px;
             font-style: normal;
@@ -59,7 +59,7 @@ const StyledWrapper = styled.div<{
         }
 
         span {
-            color: #323232;
+            color: ${props => props.theme.textColor};
         }
     }
 
@@ -84,7 +84,7 @@ const StyledWrapper = styled.div<{
         top: 100%;
         right: 0;
         padding: 10px;
-        background-color: #F1F6F9;
+        background-color: ${props => props.theme.backgroundSearchColor};;
         border-radius: 20px;
         border-top-right-radius: 0;
         border-top-left-radius: 0;

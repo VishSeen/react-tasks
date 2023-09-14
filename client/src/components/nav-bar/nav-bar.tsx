@@ -49,6 +49,10 @@ const NavBar: FunctionComponent<NavBarProps> = ({
                 <div className="nav-bar__center-bar">
                     <NavBarMenu menuItems={config["nav-bar-items"]} isNavLinks={true} />
                 </div>
+
+                <div className="nav-bar__bottom-bar">
+                    <NavBarMenu menuItems={config["nav-bar-setting"]} isNavLinks={true} />
+                </div>
             </div>
         </StyledNav>
     );

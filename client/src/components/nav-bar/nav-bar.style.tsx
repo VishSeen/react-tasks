@@ -14,6 +14,9 @@ const StyledNav = styled.div`
     .nav-bar {
         height: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .nav-bar__top-bar {
@@ -32,6 +35,10 @@ const StyledNav = styled.div`
                 color: #fff;
             }
         }
+    }
+
+    .nav-bar__center-bar {
+        height: 100%;
     }
 `;
 

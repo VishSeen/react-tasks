@@ -21,5 +21,12 @@
         "icon": "note",
         "url": "notes"
         }
+    ],
+    "nav-bar-setting": [
+        {
+            "title": "Settings",
+            "icon": "page_info",
+            "url": "settings"
+        }
     ]
 }

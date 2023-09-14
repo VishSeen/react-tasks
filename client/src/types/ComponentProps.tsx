@@ -9,6 +9,12 @@ export type FabBtnProps = {
 }
 
 
+export type SearchBarProps = {
+    title?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onBtnClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
 
 
 export type UserPanelProps = {

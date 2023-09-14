@@ -17,7 +17,10 @@ export type Link = {
 
 export type Theme = {
     textColor: string;
+    textColorDark: string;
     backgroundColor: string;
+    backgroundNavColor: string;
+    backgroundSearchColor: string;
     accentColor: string;
 }
 

@@ -9,6 +9,7 @@ import StyledApp from './App.style';
 import { lightTheme, darkTheme, GlobalStyle } from './assets/styles/theme';
 import Homepage from './pages/home/homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Image } from '../src/types/Types';
 import config from '../src/config.json';
 
 
@@ -20,12 +21,15 @@ function App() {
     const [theme, setTheme] = useState<boolean>(true);
     const click = () => setTheme(!theme);
 
-    const image = {
+    const image: Image = {
         src: "https://cdn.wallpapersafari.com/38/11/2WqNdH.jpg",
         altText: "Name"
     }
 
+    const searchBarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(event.target.value);
 
+    }
 
 
     return (
@@ -36,7 +40,7 @@ function App() {
                 <div className="main-wrapper">
                     <BrowserRouter>
                         <div className="main-wrapper__top-bar">
-                            <SearchBar searchHandler={click} />
+                            <SearchBar onBtnClick={click} onChange={searchBarChange} />
 
                             <div className="main-wrapper__top-bar__right">
                                 <UserPanel name="Vishroy Seenarain" image={image} />
@@ -46,6 +50,7 @@ function App() {
                                 </button>
                             </div>
                         </div>
+
                         <NavBar />
 
                         <Routes>
@@ -54,10 +59,9 @@ function App() {
                             <Route path={config['nav-bar-items'][2]['url']} element={<Homepage title="Reminders" />} />
                             <Route path={config['nav-bar-items'][3]['url']} element={<Homepage title="Notes" />} />
                         </Routes>
+                        <BtnFab />
                     </BrowserRouter>
                 </div>
-
-                <BtnFab />
             </StyledApp>
         </ThemeProvider>
     );

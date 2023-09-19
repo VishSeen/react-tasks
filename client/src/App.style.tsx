@@ -10,14 +10,15 @@ const StyledApp = styled.div<{
         padding-top: 27px;
     }
 
-    .main-wrapper__top-bar {
+    .top-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 18px;
+        position: fixed;
     }
 
-    .main-wrapper__top-bar__right {
+    .top-bar__right {
         display: flex;
         align-items: center;
 

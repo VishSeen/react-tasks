@@ -36,33 +36,35 @@ function App() {
         <ThemeProvider theme={theme ? lightTheme : darkTheme} >
             <GlobalStyle />
 
-            <StyledApp className="App">
-                <div className="main-wrapper">
-                    <BrowserRouter>
-                        <div className="main-wrapper__top-bar">
-                            <SearchBar onBtnClick={click} onChange={searchBarChange} />
+            <BrowserRouter>
+                <StyledApp className="App">
+                    <div className="top-bar">
+                        <SearchBar onBtnClick={click} onChange={searchBarChange} />
 
-                            <div className="main-wrapper__top-bar__right">
-                                <UserPanel name="Vishroy Seenarain" image={image} />
+                        <div className="top-bar__right">
+                            <UserPanel name="Vishroy Seenarain" image={image} />
 
-                                <button className="btn-theme" title='Switch theme' onClick={() => setTheme(!theme)}>
-                                    <span className="material-symbols-rounded">{theme ? 'dark_mode' : 'light_mode'}</span>
-                                </button>
-                            </div>
+                            <button className="btn-theme" title='Switch theme' onClick={() => setTheme(!theme)}>
+                                <span className="material-symbols-rounded">{theme ? 'dark_mode' : 'light_mode'}</span>
+                            </button>
                         </div>
+                    </div>
 
-                        <NavBar />
+                    <NavBar />
+
+                    <div className="main-wrapper">
 
                         <Routes>
-                            <Route index element={<Homepage title="Dashboard"/>} />
+                            <Route index element={<Homepage title="Dashboard" />} />
                             <Route path={config['nav-bar-items'][1]['url']} element={<Homepage title="Todo" />} />
                             <Route path={config['nav-bar-items'][2]['url']} element={<Homepage title="Reminders" />} />
                             <Route path={config['nav-bar-items'][3]['url']} element={<Homepage title="Notes" />} />
                         </Routes>
-                        <BtnFab />
-                    </BrowserRouter>
-                </div>
-            </StyledApp>
+                    </div>
+
+                    <BtnFab />
+                </StyledApp>
+            </BrowserRouter>
         </ThemeProvider>
     );
 }

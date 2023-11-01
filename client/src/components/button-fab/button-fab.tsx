@@ -1,9 +1,9 @@
 import { FunctionComponent, useState } from "react";
-import StyledWrapper from './button-fab.style';
+import StyledWrapper from './style';
 import { FabBtnProps } from "../../types/ComponentProps";
 
 
-const BtnFab: FunctionComponent<FabBtnProps> = ({
+const ButtonFab: FunctionComponent<FabBtnProps> = ({
     icon = 'add',
     className
 }) => {
@@ -30,4 +30,4 @@ const BtnFab: FunctionComponent<FabBtnProps> = ({
 }
 
 
-export default BtnFab;
+export default ButtonFab;

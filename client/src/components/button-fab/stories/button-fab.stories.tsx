@@ -7,7 +7,14 @@ const meta = {
     component: ButtonFab,
     tags: ['autodocs'],
     argTypes: {
-        icon: { type: 'string' },
+        icon: {
+            type: 'string',
+            description: "Search the icon you need on Google Material Icons."
+        },
+        className: {
+            type: 'string',
+            description: "Added for future references or styling."
+        }
     },
     parameters: {
         themes: {

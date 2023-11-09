@@ -18,6 +18,29 @@ const StyledButtonIcon = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        span {
+            color: ${props => props.theme.textColor};
+        }
+    }
+
+
+    &.mini {
+        button span {
+            font-size: 16px;
+        }
+    }
+
+    &.normal {
+        button span {
+            font-size: 24px;
+        }
+    }
+
+    &.small {
+        button span {
+            font-size: 18px;
+        }
     }
 `;
 

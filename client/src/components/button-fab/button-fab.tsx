@@ -8,7 +8,6 @@ const ButtonFab: FunctionComponent<FabBtnProps> = ({
     className
 }) => {
     const [fabClicked, setFabClicked] = useState<boolean>(false);
-    // const [rotate, setFabIcon] = useState<string>('add');
 
     const onClick= () => {
         setFabClicked(!fabClicked);

@@ -1,42 +1,28 @@
-import React from "react";
-import styled from "styled-components";
-import StyledSearch from "./search-bar.style";
+import React, { FunctionComponent, useState } from "react";
+import StyledSearch from "./style";
 import { SearchBarProps } from "../../types/ComponentProps";
+import ButtonIcon from "../button-icon/button-icon";
 
-
-
-type BtnSearchProps = {
-    icon: string;
-    clickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-
-const BtnSearch: React.FC<BtnSearchProps> = ({
-    icon,
-    clickEvent
-}) => {
-    return (
-        <button onClick={clickEvent}>
-            <span className="material-symbols-rounded">
-                {icon}
-            </span>
-        </button>
-    );
-}
-
-const SearchBar: React.FC<SearchBarProps> = ({
+const SearchBar: FunctionComponent<SearchBarProps> = ({
     title = "Search here .. ",
-    onChange,
-    onBtnClick
+    inputChange,
+    btnSearchClick,
+    btnCloseClick
 }) => {
+    const [searchText, setSearchtext] = useState<String>('');
+
     return (
         <StyledSearch className="search-bar-wrapper">
-            <div className="btn__search-bar">
-                <BtnSearch icon="search" clickEvent={onBtnClick} />
+            <div className="btn-search-bar">
+                <ButtonIcon icon="search" clickEvent={btnSearchClick} />
             </div>
 
             <div className="input__search">
-                <input onChange={onChange} placeholder={title} type="text" name="search" id="input-search" />
+                <input onChange={inputChange} placeholder={title} type="text" name="search" id="input-search" />
+            </div>
+
+            <div className="btn-clear">
+                <ButtonIcon icon="close" clickEvent={btnCloseClick} />
             </div>
         </StyledSearch>
     );

@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { LogoProps } from "../../types/ComponentProps";
-import StyledWrapper from "./logo-style";
+import StyledWrapper from "./style";
 
 const Logo: FunctionComponent<LogoProps> = ({
     text,

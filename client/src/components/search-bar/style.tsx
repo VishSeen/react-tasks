@@ -1,15 +1,15 @@
 import { styled } from 'styled-components';
 
 const StyledSearch = styled.div<{ className?: string }>`
-    background: ${props => props.theme.backgroundSearchColor};
+    background-color: ${props => props.theme.backgroundSearchColor};
     width: 35rem;
     height: 45px;
     display: flex;
     align-items: center;
-    padding: 0 20px 0 10px;
+    padding: 0 10px;
     border-radius: 50px;
 
-    .btn__search-bar button {
+    .btn-icon button {
         border: none;
         color: ${props => props.theme.textColor};
         opacity: 0.5;

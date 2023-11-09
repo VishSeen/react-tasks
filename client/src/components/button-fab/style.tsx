@@ -3,10 +3,6 @@ import { styled } from 'styled-components';
 const StyledWrapper = styled.div<{
     className?: string
  }>`
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-
   @media screen and (min-width: 992px) {
     bottom: 2rem;
     right: 2rem;

@@ -11,8 +11,13 @@ export type FabBtnProps = {
 
 export type SearchBarProps = {
     title?: string;
-    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    onBtnClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    inputChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    btnSearchClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    btnCloseClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+export type ButtonIconProps = {
+    icon: string;
+    clickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 

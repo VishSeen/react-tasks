@@ -16,7 +16,9 @@ export type SearchBarProps = {
     btnCloseClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 export type ButtonIconProps = {
+    className?: string;
     icon: string;
+    size?: string;
     clickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

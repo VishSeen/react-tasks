@@ -28,7 +28,6 @@ function App() {
 
     const searchBarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event.target.value);
-
     }
 
 
@@ -39,7 +38,7 @@ function App() {
             <BrowserRouter>
                 <StyledApp className="App">
                     <div className="top-bar">
-                        <SearchBar onBtnClick={click} onChange={searchBarChange} />
+                        <SearchBar btnSearchClick={click} inputChange={searchBarChange} />
 
                         <div className="top-bar__right">
                             <UserPanel name="Vishroy Seenarain" image={image} />
@@ -53,7 +52,6 @@ function App() {
                     <NavBar />
 
                     <div className="main-wrapper">
-
                         <Routes>
                             <Route index element={<Homepage title="Dashboard" />} />
                             <Route path={config['nav-bar-items'][1]['url']} element={<Homepage title="Todo" />} />

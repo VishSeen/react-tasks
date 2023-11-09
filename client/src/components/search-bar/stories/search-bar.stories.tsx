@@ -15,16 +15,30 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof SearchBar>;
 
-const Test = () => {
-    alert("Hello");
+
+
+let text = ''
+const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(event?.target.value);
+    text = event?.target.value;
+}
+
+const searchEvent = () => {
+    alert(text)
+}
+const closeEvent = () => {
+    const input = document.getElementsByName('search')[0];
+    input.value = '';
+    text = ''
 }
 
 
 export const Primary: Story = {
     args: {
         title: 'Search here..',
-        onBtnClick: Test,
-        onChange: Test
+        inputChange: onChange,
+        btnSearchClick: searchEvent,
+        btnCloseClick: closeEvent
     }
 }
 

@@ -6,9 +6,21 @@ const meta = {
     component: SearchBar,
     argTypes: {
         title: {
-            type: 'string'
+            type: 'string',
+            description: "Placeholder text for the search bar."
         },
-
+        inputChange: {
+            type: 'function',
+            description: "Custom function when input value is changing."
+        },
+        btnSearchClick: {
+            type: 'function',
+            description: "Search button click event."
+        },
+        btnCloseClick: {
+            type: 'function',
+            description: "Close button event which normally should clear the search field."
+        }
     }
 } satisfies Meta<typeof SearchBar>;
 

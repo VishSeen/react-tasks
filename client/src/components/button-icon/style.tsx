@@ -27,19 +27,28 @@ const StyledButtonIcon = styled.div`
 
     &.mini {
         button span {
-            font-size: 16px;
+            font-size: 15px;
+            @media screen and (min-width: 992px) {
+                font-size: 16px;
+            }
         }
     }
 
     &.normal {
         button span {
-            font-size: 24px;
+            font-size: 20px;
+            @media screen and (min-width: 992px) {
+                font-size: 24px;
+            }
         }
     }
 
     &.small {
         button span {
-            font-size: 18px;
+            font-size: 16px;
+            @media screen and (min-width: 992px) {
+                font-size: 18px;
+            }
         }
     }
 `;

@@ -1,22 +1,41 @@
 # React Tasks app
 
-A minimalistic web app for your daily agendas. A fullstack javascript/typescript project.
-
+A minimalistic web app for your daily agendas. A fullstack JavaScript/TypeScript project.
 
 ### Tech Stack
 
 Frontend :-
+
 - HTML/CSS
-- React JS
+- React
 - Typescript
 
 Server :-
-- Node JS
-- Express JS
+
+- Node.js
+- Express
 
 Database :-
-- MySql
 
+- MySQL
+
+### Local Setup
+
+#### Prerequisites
+
+Make sure you have Node version `20.8.0` installed.
+
+To run the installation for the project, use the following command from the root of the project which will install the client and backend dependencies respectively in one go.
+
+```
+npm run setup
+```
+
+To run both the client and backend servers locally, run the following command from the root of the project.
+
+```
+npm run dev
+```
 
 ### UI Design
 

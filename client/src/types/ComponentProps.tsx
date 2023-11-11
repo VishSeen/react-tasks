@@ -1,3 +1,4 @@
+import { Tag } from './Constants';
 import {Image, NavMenuItem } from './Types';
 
 
@@ -47,3 +48,7 @@ export type NavBarMenuProps = {
     isNavLinks: boolean;
 }
 
+export type ChipTagProps = {
+    className?:string;
+    tag?: Tag;
+}

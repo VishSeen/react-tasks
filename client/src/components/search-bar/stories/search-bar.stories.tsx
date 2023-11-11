@@ -39,7 +39,7 @@ const searchEvent = () => {
     alert(text)
 }
 const closeEvent = () => {
-    const input = document.getElementsByName('search')[0];
+    const input = document.getElementsByName('search')[0] as HTMLInputElement;
     input.value = '';
     text = ''
 }

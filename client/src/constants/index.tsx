@@ -1,5 +1,3 @@
-
-
 export enum Tag {
     personal = "personal",
     shopping = "shopping",

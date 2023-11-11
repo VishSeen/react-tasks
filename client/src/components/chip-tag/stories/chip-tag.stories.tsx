@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ChipTag from '../chip-tag';
-import { Tag } from '../../../types/Constants';
+import { Tag } from '../../../constants';
 
 
 const meta = {

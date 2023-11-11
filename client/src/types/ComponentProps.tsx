@@ -1,4 +1,4 @@
-import { Tag } from './Constants';
+import { Tag } from '../constants';
 import {Image, NavMenuItem } from './Types';
 
 

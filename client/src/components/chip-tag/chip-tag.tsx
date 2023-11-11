@@ -13,7 +13,7 @@ const ChipTag: FunctionComponent<ChipTagProps> = ({
                 #{tag}
             </span>
         </StyledChip>
-    )
+    );
 }
 
 export default ChipTag;

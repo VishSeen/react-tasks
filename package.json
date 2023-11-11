@@ -6,7 +6,7 @@
   "scripts": {
     "setup:backend": "cd backend && npm install",
     "setup:client": "cd client && npm install",
-    "setup": "npm run setup:backend && npm run setup:client",
+    "setup": "npm install && npm run setup:backend && npm run setup:client",
     "dev": "concurrently \"cd client && npm run dev\""
   },
   "keywords": [],

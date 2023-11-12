@@ -26,6 +26,7 @@ export type ButtonIconProps = {
 
 export interface UserPanelProps extends UserInfo {
     className?: string;
+    isInfoVisible: boolean;
 }
 export interface UserPanelInfoProps extends UserInfo {
     className?: string;

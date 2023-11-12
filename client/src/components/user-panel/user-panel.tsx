@@ -11,7 +11,8 @@ const UserPanel: React.FC<UserPanelProps> = ({
     className,
     image,
     name,
-    email
+    email,
+    isInfoVisible
 }) => {
     const [panelVisible, setPanelVisible] = useState<boolean>(false);
 
@@ -22,13 +23,17 @@ const UserPanel: React.FC<UserPanelProps> = ({
             onMouseLeave={() => setPanelVisible(false)}
         >
             <div className="user-panel">
-                <div className="user-panel__user-name">
-                    <p>
-                        {name}
-                    </p>
+                {
+                    isInfoVisible && (
+                        <div className="user-panel__user-name">
+                            <p>
+                                {name}
+                            </p>
 
-                    <span className={config?.icons}>expand_more</span>
-                </div>
+                            <span className={config?.icons}>expand_more</span>
+                        </div>
+                    )
+                }
 
                 <div className="user-panel__user-profile-image">
                     <img src={image.src} alt={image.altText} />

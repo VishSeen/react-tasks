@@ -4,10 +4,14 @@ import styled from "styled-components";
 const StyledWrapper = styled.div`
     &.user-panel-wrapper {
         padding: 4px;
-        position: relative;
-        width: 237px;
+        position: unset;
+        width: fit-content;
         height: 50px;
         transition: 0.1s ease-in all;
+        @media screen and (min-width: 992px) {
+            position: relative;
+            width: 237px;
+        }
     }
 
 
@@ -26,6 +30,7 @@ const StyledWrapper = styled.div`
     }
 
     .user-panel__user-name {
+        display: none;
         margin-right: 14px;
         opacity: 0.7;
         transition: 0.3s ease-in-out all;
@@ -59,13 +64,6 @@ const StyledWrapper = styled.div`
             height: 100%;
             object-fit: cover;
         }
-    }
-
-
-    .user-panel-info__wrapper {
-        position: relative;
-        top: 6px;
-        right: 0;
     }
 `;
 

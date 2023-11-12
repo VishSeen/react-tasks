@@ -9,9 +9,16 @@ const StyledUserPanelInfo = styled.div`
     border-radius: 18px;
     border: 1px solid ${props => props.theme.borderColor};
     padding: 10px;
+    position: absolute;
+    top: 63px;
+    right: 0;
+    left: 0;
     @media screen and (min-width: 768px) {
         width: 241px;
+        position: relative;
+        top: 6px;
     }
+
 
     &.visible {
         display: flex;

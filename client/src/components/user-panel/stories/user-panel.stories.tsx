@@ -23,6 +23,9 @@ const meta = {
         email: {
             type: 'string',
             description: "Email addresse used for the logged in user."
+        },
+        isInfoVisible: {
+            type: 'boolean'
         }
     }
 } satisfies Meta<typeof UserPanel>
@@ -36,10 +39,20 @@ const image = {
     altText: "Name"
 }
 
-export const Primary: Story = {
+export const InfoVisible: Story = {
     args: {
         name: 'Jasmine Blues',
         image: image,
-        email: 'jasmineblues@mail.com'
+        email: 'jasmineblues@mail.com',
+        isInfoVisible: true
+    }
+}
+
+export const InfoNotVisible: Story = {
+    args: {
+        name: 'Jasmine Blues',
+        image: image,
+        email: 'jasmineblues@mail.com',
+        isInfoVisible: false
     }
 }

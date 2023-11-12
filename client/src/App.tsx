@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './assets/styles/global.scss';
 import SearchBar from './components/search-bar/search-bar';
 import ButtonFab from './components/button-fab/button-fab';
-import UserPanel from './components/user-panel/user-panel';
 import NavBar from './components/nav-bar/nav-bar';
 import { ThemeProvider } from 'styled-components';
 import StyledApp from './App.style';

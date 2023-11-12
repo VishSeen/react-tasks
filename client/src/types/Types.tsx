@@ -22,6 +22,9 @@ export type Theme = {
     backgroundNavColor: string;
     backgroundSearchColor: string;
     accentColor: string;
+    borderColor: string;
+    hoverBackgroundColor: string;
+    boxShadow: string;
 }
 
 export type NavMenuItem = {
@@ -31,4 +34,10 @@ export type NavMenuItem = {
 }
 
 
+export type DropdownItem = {
+    iconLeft?: string;
+    title: string;
+    titleColor?: string;
+    clickEvent?: () => void;
+}
 

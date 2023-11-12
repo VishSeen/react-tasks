@@ -1,32 +1,33 @@
-import { useLayoutEffect, useState } from "react";
+
+import { useState } from "react";
 import { UserPanelProps } from "../../types/ComponentProps";
-import StyledWrapper from "./user-panel.style";
+import StyledWrapper from "./style";
+import UserPanelInfo from "../user-panel-info/user-panel-info";
+import config from '../../config.json';
 
 
 
 const UserPanel: React.FC<UserPanelProps> = ({
+    className,
+    image,
     name,
-    image
+    email
 }) => {
     const [panelVisible, setPanelVisible] = useState<boolean>(false);
 
-    const userPanelClicked = (): void => {
-        if(panelVisible) {
-            setPanelVisible(false)
-        } else {
-            setPanelVisible(true);
-        }
-    }
-
     return (
-        <StyledWrapper $primary className={`user-panel-wrapper ${panelVisible ? 'visible' : 'none'}`}>
-            <div className="user-panel" onClick={userPanelClicked}>
+        <StyledWrapper
+            className={`user-panel-wrapper ${className}`}
+            onMouseEnter={() => setPanelVisible(true)}
+            onMouseLeave={() => setPanelVisible(false)}
+        >
+            <div className="user-panel">
                 <div className="user-panel__user-name">
                     <p>
                         {name}
                     </p>
 
-                    <span className="material-symbols-rounded">expand_more</span>
+                    <span className={config?.icons}>expand_more</span>
                 </div>
 
                 <div className="user-panel__user-profile-image">
@@ -34,9 +35,12 @@ const UserPanel: React.FC<UserPanelProps> = ({
                 </div>
             </div>
 
-            <div className={`user-info-panel ${panelVisible ? 'visible' : 'none'}`}>
-                <p>hell</p>
-            </div>
+            <UserPanelInfo
+                name={name}
+                email={email}
+                image={image}
+                isOpened={panelVisible}
+            />
         </StyledWrapper>
     );
 }

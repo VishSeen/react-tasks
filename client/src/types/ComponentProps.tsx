@@ -1,12 +1,11 @@
 import { Tag } from '../constants';
-import {DropdownItem, Image, NavMenuItem } from './Types';
+import {DropdownItem, Image, NavMenuItem, UserInfo } from './Types';
 
 
 
 export type FabBtnProps = {
     icon?: string;
     className?: string;
-    // onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 
@@ -25,11 +24,14 @@ export type ButtonIconProps = {
 
 
 
-export type UserPanelProps = {
-    name: string;
-    image: Image;
+export interface UserPanelProps extends UserInfo {
+    className?: string;
 }
-
+export interface UserPanelInfoProps extends UserInfo {
+    className?: string;
+    items?: DropdownItem[];
+    isOpened: boolean;
+}
 
 export type LogoProps = {
     text: string;

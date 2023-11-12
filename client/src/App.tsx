@@ -41,8 +41,6 @@ function App() {
                         <SearchBar btnSearchClick={click} inputChange={searchBarChange} />
 
                         <div className="top-bar__right">
-                            <UserPanel name="Vishroy Seenarain" image={image} />
-
                             <button className="btn-theme" title='Switch theme' onClick={() => setTheme(!theme)}>
                                 <span className="material-symbols-rounded">{theme ? 'dark_mode' : 'light_mode'}</span>
                             </button>

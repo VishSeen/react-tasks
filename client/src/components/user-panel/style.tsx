@@ -1,27 +1,13 @@
 import styled from "styled-components";
 
 
-const StyledWrapper = styled.div<{
-    $primary?: boolean;
-}>`
+const StyledWrapper = styled.div`
     &.user-panel-wrapper {
         padding: 4px;
         position: relative;
         width: 237px;
         height: 50px;
         transition: 0.1s ease-in all;
-        &:hover {
-            border-radius: 45px;
-            background-color: ${props => props.theme.backgroundSearchColor};
-
-        }
-
-        &.visible {
-            border-radius: 20px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            background-color: ${props => props.theme.backgroundSearchColor};
-        }
     }
 
 
@@ -43,7 +29,6 @@ const StyledWrapper = styled.div<{
         margin-right: 14px;
         opacity: 0.7;
         transition: 0.3s ease-in-out all;
-
         @media screen and (min-width: 992px) {
             display: flex;
             flex-direction: row;
@@ -64,9 +49,9 @@ const StyledWrapper = styled.div<{
     }
 
     .user-panel__user-profile-image {
-        border-radius: 50%;
         width: 40px;
         height: 40px;
+        border-radius: 50%;
         overflow: hidden;
 
         img {
@@ -77,23 +62,10 @@ const StyledWrapper = styled.div<{
     }
 
 
-    .user-info-panel {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 100%;
+    .user-panel-info__wrapper {
+        position: relative;
+        top: 6px;
         right: 0;
-        padding: 10px;
-        background-color: ${props => props.theme.backgroundSearchColor};;
-        border-radius: 20px;
-        border-top-right-radius: 0;
-        border-top-left-radius: 0;
-        &.visible {
-            display: block;
-        }
-        &.none {
-            display: none;
-        }
     }
 `;
 

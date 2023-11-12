@@ -1,5 +1,5 @@
 import { Tag } from '../constants';
-import {Image, NavMenuItem } from './Types';
+import {DropdownItem, Image, NavMenuItem } from './Types';
 
 
 
@@ -51,4 +51,15 @@ export type NavBarMenuProps = {
 export type ChipTagProps = {
     className?:string;
     tag?: Tag;
+}
+
+
+export type DropdownOptionProps = {
+    className?: string;
+    items?: DropdownItem[];
+    isOpened?: boolean;
+}
+
+export interface DropdownItemProps extends DropdownItem {
+    className?: string;
 }

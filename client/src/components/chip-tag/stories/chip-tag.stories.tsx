@@ -15,6 +15,7 @@ const meta = {
         tag: {
             control: 'radio',
             options: ['important', 'personal', 'work', 'shopping'],
+            description: "Different tag statuses used for todo."
         }
     }
 } satisfies Meta<typeof ChipTag>;

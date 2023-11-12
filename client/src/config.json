@@ -28,5 +28,6 @@
             "icon": "page_info",
             "url": "settings"
         }
-    ]
+    ],
+    "icons": "material-symbols-rounded"
 }

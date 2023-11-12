@@ -1,5 +1,5 @@
 import { Tag } from '../constants';
-import {DropdownItem, Image, NavMenuItem, UserInfo } from './Types';
+import {DropdownItem, NavMenuItem, UserInfo } from './Types';
 
 
 

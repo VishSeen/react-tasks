@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import './assets/styles/global.scss';
 import SearchBar from './components/search-bar/search-bar';
 import ButtonFab from './components/button-fab/button-fab';
-import UserPanel from './components/user-panel/user-panel';
 import NavBar from './components/nav-bar/nav-bar';
 import { ThemeProvider } from 'styled-components';
 import StyledApp from './App.style';
 import { lightTheme, darkTheme, GlobalStyle } from './assets/styles/theme';
 import Homepage from './pages/home/homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Image } from '../src/types/Types';
 import config from '../src/config.json';
 
 
@@ -20,11 +18,6 @@ import config from '../src/config.json';
 function App() {
     const [theme, setTheme] = useState<boolean>(true);
     const click = () => setTheme(!theme);
-
-    const image: Image = {
-        src: "https://cdn.wallpapersafari.com/38/11/2WqNdH.jpg",
-        altText: "Name"
-    }
 
     const searchBarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         console.log(event.target.value);

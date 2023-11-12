@@ -25,7 +25,8 @@ const meta = {
             description: "Email addresse used for the logged in user."
         },
         isInfoVisible: {
-            type: 'boolean'
+            type: 'boolean',
+            description: "Added control to display user info. Note that on mobile it will never be displayed."
         }
     }
 } satisfies Meta<typeof UserPanel>

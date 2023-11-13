@@ -12,7 +12,7 @@ const meta = {
         },
         isNavLinks: {
             type: 'boolean',
-            description: "Set link as NavLink routes or normal a tag links."
+            description: "Set link as NavLink or normal a tag links."
         }
     }
 } satisfies Meta<typeof NavBarMenu>
@@ -44,6 +44,7 @@ const navMenu = [
         url: 'notes'
     }
 ]
+
 export const Primary: Story = {
     args: {
         className: '',

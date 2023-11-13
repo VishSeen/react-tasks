@@ -1,3 +1,4 @@
+import { StringLiteral } from 'typescript';
 import { Tag } from '../constants';
 import {DropdownItem, NavMenuItem, UserInfo } from './Types';
 
@@ -6,6 +7,14 @@ import {DropdownItem, NavMenuItem, UserInfo } from './Types';
 export type FabBtnProps = {
     icon?: string;
     className?: string;
+}
+
+export type ButtonProps = {
+    className?: string;
+    title: string;
+    iconRight?: string;
+    buttonType?: string;
+    clickEvent?: () => void;
 }
 
 
@@ -26,6 +35,7 @@ export type ButtonIconProps = {
 
 export interface UserPanelProps extends UserInfo {
     className?: string;
+    isInfoVisible: boolean;
 }
 export interface UserPanelInfoProps extends UserInfo {
     className?: string;

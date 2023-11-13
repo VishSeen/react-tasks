@@ -1,6 +1,5 @@
-import { StringLiteral } from 'typescript';
-import { Tag } from '../constants';
-import {DropdownItem, Image, NavMenuItem, UserInfo } from './Types';
+import { ButtonType, Tag } from '../constants';
+import {DropdownItem, NavMenuItem, UserInfo } from './Types';
 
 
 
@@ -13,7 +12,7 @@ export type ButtonProps = {
     className?: string;
     title: string;
     iconRight?: string;
-    buttonType?: string;
+    buttonType?: ButtonType;
     clickEvent?: () => void;
 }
 

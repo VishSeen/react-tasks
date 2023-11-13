@@ -12,17 +12,31 @@ const Button: FunctionComponent<ButtonProps> = ({
 }) => {
     return(
         <StyledButton className={['button__wrapper', className, buttonType].join(' ')}>
-            <button>
-                {title}
+            {
+                iconRight ? (
+                    <button>
+                        <div className="content">
+                            <span className="text">
+                                {title}
+                            </span>
 
-                {
-                    iconRight && (
-                        <span className={config?.icons}>
-                            {iconRight}
+                            {
+                                iconRight && (
+                                    <span className={`icon ${config?.icons}`}>
+                                        {iconRight}
+                                    </span>
+                                )
+                            }
+                        </div>
+                    </button>
+                ) : (
+                    <button>
+                        <span className="text">
+                            {title}
                         </span>
-                    )
-                }
-            </button>
+                    </button>
+                )
+            }
         </StyledButton>
     )
 }

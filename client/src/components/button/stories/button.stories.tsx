@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from '../button';
+import { ButtonType } from '../../../constants';
 
 const meta = {
     title: 'Components/Buttons/Button',
@@ -20,7 +21,7 @@ const meta = {
         },
         buttonType: {
             control: 'radio',
-            options: ['Filled', 'Outlined'],
+            options: ['filled', 'outlined'],
             description: ""
         },
         clickEvent: {
@@ -37,21 +38,21 @@ type Story = StoryObj<typeof meta>;
 export const Filled: Story = {
     args: {
         title: 'Sign in',
-        buttonType: 'filled'
+        buttonType: ButtonType.filled
     }
 }
 
 export const Outlined: Story = {
     args: {
         title: 'Sign in',
-        buttonType: 'outlined'
+        buttonType: ButtonType.outlined
     }
 }
 
 export const FilledWithIcon: Story = {
     args: {
         title: 'Sign in',
-        buttonType: 'filled',
+        buttonType: ButtonType.filled,
         iconRight: 'arrow_forward'
     }
 }
@@ -59,7 +60,7 @@ export const FilledWithIcon: Story = {
 export const OutlinedWithIcon: Story = {
     args: {
         title: 'Sign in',
-        buttonType: 'outlined',
+        buttonType: ButtonType.outlined,
         iconRight: 'arrow_forward'
     }
 }

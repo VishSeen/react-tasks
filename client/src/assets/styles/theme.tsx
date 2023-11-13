@@ -15,7 +15,7 @@ export const lightTheme: Theme = {
 
 export const darkTheme: Theme = {
     textColor: "#ffffff",
-    textColorDark: "#ffffff",
+    textColorDark: "#323232",
     backgroundColor: "#1f1f1f",
     backgroundNavColor: "#323232",
     backgroundSearchColor: "#323232",

@@ -1,10 +1,6 @@
 import { styled } from 'styled-components';
 
 const StyledNav = styled.div`
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    bottom: 1rem;
     width: 257px;
     padding: 35px 20px;
     background-color: #323232;

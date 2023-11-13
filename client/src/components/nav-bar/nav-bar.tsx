@@ -1,7 +1,6 @@
 import { FunctionComponent, useState } from "react";
-import { Image } from "../../types/Types";
 import Logo from "../logo/logo";
-import StyledNav from "./nav-bar.style";
+import StyledNav from "./style";
 import NavBarMenu from "../nav-bar-menu/nav-bar-menu";
 import { NavBarProps } from "../../types/ComponentProps";
 import config from '../../config.json';
@@ -43,7 +42,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({
                     <button className="btn-nav" onClick={() => setOpened(!opened)}>
                         <span className="material-symbols-rounded">notes</span>
                     </button>
-                    <Logo text="tasks" className={opened ? '' : 'dark'}/>
+                    <Logo text="tasks" className={opened ? '' : 'dark'} />
                 </div>
 
                 <div className="nav-bar__center-bar">

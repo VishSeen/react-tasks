@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import { NavLink } from 'react-router-dom';
-import StyledNavBarMenu from "./nav-bar-menu.style";
 import { NavBarMenuProps } from "../../types/ComponentProps";
+import StyledNavBarMenu from "./style";
 
 
 
@@ -31,14 +31,14 @@ const NavBarMenu: FunctionComponent<NavBarMenuProps> = ({
                                         </NavLink>
                                     ) : (
                                         <a href={item.url}>
-                                                {
-                                                    item.icon && (
-                                                        <span className="material-symbols-rounded">
-                                                            {item.icon}
-                                                        </span>
-                                                    )
-                                                }
-                                                {item.title}
+                                            {
+                                                item.icon && (
+                                                    <span className="material-symbols-rounded">
+                                                        {item.icon}
+                                                    </span>
+                                                )
+                                            }
+                                            {item.title}
                                         </a>
                                     )
                                 }

@@ -10,7 +10,7 @@ const Button: FunctionComponent<ButtonProps> = ({
     buttonType,
     clickEvent
 }) => {
-    return(
+    return (
         <StyledButton className={['button__wrapper', className, buttonType].join(' ')}>
             <button>
                 {title}

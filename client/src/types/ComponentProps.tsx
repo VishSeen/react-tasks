@@ -1,5 +1,5 @@
 import { Tag } from '../constants';
-import { DropdownItem, NavMenuItem, UserInfo } from './Types';
+import { DropdownItem, NavMenuItem, TodoItem, TodoItems, UserInfo } from './Types';
 
 export type FabBtnProps = {
   icon?: string;
@@ -68,9 +68,11 @@ export interface DropdownItemProps extends DropdownItem {
   className?: string;
 }
 
-export interface TodoItemProps {
+export interface TodoItemProps extends TodoItem {
   className?: string;
-  copy?: string;
-  tag?: Tag;
-  title: string;
+}
+
+export interface TodoListProps {
+  className?: string;
+  list: TodoItems;
 }

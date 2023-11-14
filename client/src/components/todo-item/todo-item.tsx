@@ -1,10 +1,15 @@
-import { type FC } from 'react';
+import { useState, type FC } from 'react';
 import { TodoItemProps } from '../../types/ComponentProps';
 import * as S from './style';
 
 export const TodoItem: FC<TodoItemProps> = (props) => {
   const { className = '', copy, tag, title } = props;
   const baseClassName = 'todo-item';
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  const handleComplete = () => {
+    setIsCompleted((isCompleted) => !isCompleted);
+  };
 
   return (
     <>
@@ -14,8 +19,10 @@ export const TodoItem: FC<TodoItemProps> = (props) => {
             className={`${baseClassName}__checkbox`}
             type="checkbox"
             name="tbd"
+            checked={isCompleted}
+            onChange={handleComplete}
           />
-          <h6>{title}</h6>
+          <S.StyledTodoTitle isCompleted={isCompleted}>{title}</S.StyledTodoTitle>
           <S.StyledButtonIcon
             className={`${baseClassName}__menu`}
             icon="more_vert"

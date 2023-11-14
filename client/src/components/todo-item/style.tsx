@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import ButtonIcon from '../button-icon/button-icon';
 import ChipTag from '../chip-tag/chip-tag';
 
@@ -13,14 +13,20 @@ export const StyledTodoItem = styled.div`
 export const StyledTodoItemHeader = styled.div`
   display: flex;
   align-items: center;
+`;
 
-  h6 {
-    flex: 1;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 15px;
-    color: ${(props) => props.theme.textColor};
-  }
+export const StyledTodoTitle = styled.h6<{ isCompleted: boolean }>`
+  flex: 1;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 15px;
+  color: ${(props) => props.theme.textColor};
+
+  ${(props) =>
+    props.isCompleted &&
+    css`
+      text-decoration: line-through;
+    `}
 `;
 
 export const StyledCheckbox = styled.input`

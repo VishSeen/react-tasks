@@ -1,0 +1,46 @@
+import { StoryObj, type Meta } from '@storybook/react';
+import { Tag } from '../../../constants';
+import { TodoItems } from '../../../types/Types';
+import { TodoList } from '../todo-list';
+
+type Story = StoryObj<typeof TodoList>;
+
+const meta = {
+  title: 'Components/Todo/Todo List',
+  component: TodoList,
+  tags: ['autodocs']
+} satisfies Meta<typeof TodoList>;
+
+export default meta;
+
+const data: TodoItems = [
+  {
+    copy: 'Clean the turtle pond ASAP !!',
+    tag: Tag.important,
+    title:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.'
+  },
+  {
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    title: 'Design some UI for Habits app'
+  },
+  {
+    title: 'Breathe a little'
+  },
+  {
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    tag: Tag.shopping,
+    title: 'Get some cola at the shop'
+  },
+  {
+    copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    tag: Tag.personal,
+    title: 'Do 10 press-ups later tonight'
+  }
+];
+
+export const Default: Story = {
+  args: {
+    list: data
+  }
+};

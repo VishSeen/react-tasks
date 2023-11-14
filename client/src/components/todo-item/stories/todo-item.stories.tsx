@@ -1,6 +1,6 @@
 import { StoryObj, type Meta } from '@storybook/react';
 import { Tag } from '../../../constants';
-import { TodoItemProps } from '../../../types/ComponentProps';
+import { TodoItem as TodoItemType } from '../../../types/Types';
 import { TodoItem } from '../todo-item';
 
 type Story = StoryObj<typeof TodoItem>;
@@ -32,7 +32,7 @@ const meta = {
 
 export default meta;
 
-const data: TodoItemProps = {
+const data: TodoItemType = {
   copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas',
   tag: Tag.personal,
   title: 'Design some UI for Habits app'

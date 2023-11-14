@@ -21,6 +21,7 @@ export const TodoList: FC<TodoListProps> = (props) => {
               copy={item.copy}
               key={index}
               tag={item.tag}
+              isCompleted={item.isCompleted}
               title={item.title}
             />
           ))}

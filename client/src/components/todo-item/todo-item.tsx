@@ -1,14 +1,14 @@
-import { useState, type FC } from 'react';
+import { FC, useState } from 'react';
 import { TodoItemProps } from '../../types/ComponentProps';
 import * as S from './style';
 
 export const TodoItem: FC<TodoItemProps> = (props) => {
-  const { className = '', copy, tag, title } = props;
+  const { className = '', isCompleted: initialCompleted, copy, tag, title } = props;
   const baseClassName = 'todo-item';
-  const [isCompleted, setIsCompleted] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(initialCompleted);
 
   const handleComplete = () => {
-    setIsCompleted((isCompleted) => !isCompleted);
+    setIsCompleted(!isCompleted);
   };
 
   return (

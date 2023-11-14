@@ -48,6 +48,7 @@ export type DropdownItem = {
 
 export type TodoItem = {
   copy?: string;
+  isCompleted: boolean;
   tag?: Tag;
   title: string;
 };

@@ -26,6 +26,10 @@ const meta = {
     title: {
       type: 'string',
       description: 'Title of the todo item.'
+    },
+    isCompleted: {
+      type: 'boolean',
+      description: 'Indicates if the todo item is completed or not.'
     }
   }
 } satisfies Meta<typeof TodoItem>;
@@ -35,33 +39,38 @@ export default meta;
 const data: TodoItemType = {
   copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas',
   tag: Tag.personal,
-  title: 'Design some UI for Habits app'
+  title: 'Design some UI for Habits app',
+  isCompleted: false
 };
 
 export const Default: Story = {
   args: {
     copy: data.copy,
     tag: data.tag,
-    title: data.title
+    title: data.title,
+    isCompleted: data.isCompleted
   }
 };
 
 export const NoCopy: Story = {
   args: {
     tag: data.tag,
-    title: data.title
+    title: data.title,
+    isCompleted: data.isCompleted
   }
 };
 
 export const NoTag: Story = {
   args: {
     copy: data.copy,
-    title: data.title
+    title: data.title,
+    isCompleted: data.isCompleted
   }
 };
 
 export const NoCopyAndTag: Story = {
   args: {
-    title: data.title
+    title: data.title,
+    isCompleted: data.isCompleted
   }
 };

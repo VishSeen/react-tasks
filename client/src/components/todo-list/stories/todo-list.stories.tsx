@@ -16,24 +16,29 @@ export default meta;
 const data: TodoItems = [
   {
     copy: 'Clean the turtle pond ASAP !!',
+    isCompleted: false,
     tag: Tag.important,
     title:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.'
   },
   {
     copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    isCompleted: false,
     title: 'Design some UI for Habits app'
   },
   {
+    isCompleted: true,
     title: 'Breathe a little'
   },
   {
     copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    isCompleted: false,
     tag: Tag.shopping,
     title: 'Get some cola at the shop'
   },
   {
     copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget mauris, scelerisque aliquet tortor. Egestas pretium quam pellentesque sagittis ullamcorper augue felis. Eu enim enim, fermentum ac feugiat ornare diam. Sit amet condimentum eget arcu egestas.',
+    isCompleted: false,
     tag: Tag.personal,
     title: 'Do 10 press-ups later tonight'
   }

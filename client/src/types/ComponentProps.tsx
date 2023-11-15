@@ -74,3 +74,8 @@ export type DropdownOptionProps = {
 export interface DropdownItemProps extends DropdownItem {
     className?: string;
 }
+
+export type PopupAddProps = {
+    className?: string;
+    formItems?: HTMLFormElement[];
+}

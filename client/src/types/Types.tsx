@@ -1,15 +1,42 @@
 
 export type Theme = {
+    color: Color;
+    background: Background;
+    hover: Hover;
+    boxShadow: BoxShadow;
+}
+
+
+export type Font = {
+    primary: string;
+    secondary: string;
+}
+export type BoxShadow = {
+    todoItem: string;
+    userPanel: string;
+    fabBtn: string;
+    dropdownOption: string;
+}
+export type Background = {
+    body: string;
+    navBar: string;
+    searchBar: string;
+    fabBtnClose: string;
+}
+export type Color = {
+    text: Text;
+    border: string;
+    accent: string;
+}
+export type Hover = {
+    dropdownItem: string;
+}
+export type Text = {
     textColor: string;
     textColorDark: string;
-    backgroundColor: string;
-    backgroundNavColor: string;
-    backgroundSearchColor: string;
-    accentColor: string;
-    borderColor: string;
-    hoverBackgroundColor: string;
-    boxShadow: string;
 }
+
+
 
 export type Page = {
     title: string;

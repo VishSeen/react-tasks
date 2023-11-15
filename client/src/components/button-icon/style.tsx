@@ -1,9 +1,9 @@
-import {styled} from 'styled-components';
+import { styled } from 'styled-components';
 
 
 const StyledButtonIcon = styled.div`
     border: none;
-    color: ${props => props.theme.textColor};
+    color: ${props => props.theme.color.text.textColor};
     opacity: 0.5;
     background-color: transparent;
     display: flex;
@@ -20,7 +20,7 @@ const StyledButtonIcon = styled.div`
         justify-content: center;
 
         span {
-            color: ${props => props.theme.textColor};
+            color: ${props => props.theme.color.text.textColor};
         }
     }
 

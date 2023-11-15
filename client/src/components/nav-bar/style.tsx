@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 const StyledNav = styled.div`
     width: 257px;
     padding: 35px 20px;
-    background-color: #323232;
+    background-color: ${props => props.theme.background.navBar};
     border-radius: 19px;
     z-index: 10;
 
@@ -28,7 +28,7 @@ const StyledNav = styled.div`
             padding: 4px;
 
             span {
-                color: #fff;
+                color: ${props => props.theme.color.dark};
             }
         }
     }

@@ -22,14 +22,19 @@ export type Background = {
     navBar: string;
     searchBar: string;
     fabBtnClose: string;
+    overlay: string;
 }
 export type Color = {
+    white: string;
+    dark: string;
     text: Text;
     border: string;
     accent: string;
 }
 export type Hover = {
+    fabBtn: string;
     dropdownItem: string;
+    navMenuItem: string;
 }
 export type Text = {
     textColor: string;

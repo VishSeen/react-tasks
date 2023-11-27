@@ -13,7 +13,10 @@ export const TodoItem: FC<TodoItemProps> = (props) => {
 
   return (
     <>
-      <S.StyledTodoItem className={`${className} ${baseClassName}`}>
+      <S.StyledTodoItem
+        isCompleted={isCompleted}
+        className={`${className} ${baseClassName}`}
+      >
         <S.StyledTodoItemHeader className={`${baseClassName}__header`}>
           <S.StyledCheckbox
             className={`${baseClassName}__checkbox`}

@@ -12,7 +12,7 @@ export const TodoList: FC<TodoListProps> = (props) => {
       <S.StyledTodoList className={`${baseClassName} ${className}`}>
         <S.StyledListHeader>
           <h6>Ongoing</h6>
-          <span>5</span>
+          <span>{list.length}</span>
         </S.StyledListHeader>
         <S.StyledDivider />
         {list &&

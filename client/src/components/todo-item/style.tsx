@@ -2,12 +2,17 @@ import styled, { css } from 'styled-components';
 import ButtonIcon from '../button-icon/button-icon';
 import ChipTag from '../chip-tag/chip-tag';
 
-export const StyledTodoItem = styled.div`
+export const StyledTodoItem = styled.div<{ isCompleted: boolean }>`
   max-width: 320px;
   border: 1px solid ${(props) => props.theme.hoverBackgroundColor};
   border-radius: 10px;
   padding: 20px;
   box-shadow: ${(props) => props.theme.boxShadow};
+  ${(props) =>
+    props.isCompleted &&
+    css`
+      background-color: #37952e29;
+    `}
 `;
 
 export const StyledTodoItemHeader = styled.div`

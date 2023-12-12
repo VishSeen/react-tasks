@@ -13,6 +13,16 @@ const StyledNav = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &.btn-icon-nav {
+            button {
+                opacity: 1;
+            }
+
+            button span {
+                color: ${props => props.theme.background.white};
+            }
+        }
     }
 
     .nav-bar__top-bar {

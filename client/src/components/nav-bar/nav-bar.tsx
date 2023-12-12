@@ -4,6 +4,7 @@ import StyledNav from "./style";
 import NavBarMenu from "../nav-bar-menu/nav-bar-menu";
 import { NavBarProps } from "../../types/ComponentProps";
 import config from '../../config.json';
+import ButtonIcon from "../button-icon/button-icon";
 
 
 const navMenu = [
@@ -39,9 +40,7 @@ const NavBar: FunctionComponent<NavBarProps> = ({
         <StyledNav className="nav-bar-wrapper">
             <div className={`${['nav-bar', className].join(' ')}`}>
                 <div className="nav-bar__top-bar">
-                    <button className="btn-nav" onClick={() => setOpened(!opened)}>
-                        <span className="material-symbols-rounded">notes</span>
-                    </button>
+                    <ButtonIcon className="btn-icon-nav" icon="notes" />
                     <Logo text="tasks" className={opened ? '' : 'dark'} />
                 </div>
 

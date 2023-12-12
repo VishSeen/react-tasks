@@ -22,7 +22,7 @@ export const lightTheme: Theme = {
     hover: {
         fabBtn: '#dcc03e',
         dropdownItem: '#F3F3F3',
-        navMenuItem: '2c2c2c'
+        navMenuItem: '#444444'
     },
     boxShadow: {
         todoItem: '0px 1px 13px 0px rgba(166, 166, 166, 0.12)',
@@ -53,7 +53,7 @@ export const darkTheme: Theme = {
     hover: {
         fabBtn: '#dcc03e',
         dropdownItem: '#2c2c2c',
-        navMenuItem: '2c2c2c'
+        navMenuItem: '#444444'
     },
     boxShadow: {
         todoItem: '0px 1px 13px 0px rgba(166, 166, 166, 0.12)',

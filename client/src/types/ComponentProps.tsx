@@ -76,3 +76,8 @@ export interface TodoListProps {
   className?: string;
   list: TodoItems;
 }
+
+export type PopupAddProps = {
+  className?: string;
+  formItems?: HTMLFormElement[];
+};

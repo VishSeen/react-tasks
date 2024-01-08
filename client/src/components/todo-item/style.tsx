@@ -4,10 +4,10 @@ import ChipTag from '../chip-tag/chip-tag';
 
 export const StyledTodoItem = styled.div<{ isCompleted: boolean }>`
   max-width: 320px;
-  border: 1px solid ${(props) => props.theme.hoverBackgroundColor};
+  border: 1px solid ${(props) => props.theme.color.border};
   border-radius: 10px;
   padding: 20px;
-  box-shadow: ${(props) => props.theme.boxShadow};
+  box-shadow: ${(props) => props.theme.boxShadow.todoItem};
   ${(props) =>
     props.isCompleted &&
     css`
@@ -25,7 +25,7 @@ export const StyledTodoTitle = styled.h6<{ isCompleted: boolean }>`
   font-weight: 500;
   font-size: 10px;
   line-height: 15px;
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.color.text.textColor};
 
   ${(props) =>
     props.isCompleted &&
@@ -39,12 +39,12 @@ export const StyledCheckbox = styled.input`
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 4px solid ${(props) => props.theme.backgroundNavColor};
+  border: 4px solid ${(props) => props.theme.background.navBar};
   outline: none;
   appearance: none;
 
   &:checked {
-    background-color: ${(props) => props.theme.accentColor};
+    background-color: ${(props) => props.theme.color.accent};
   }
 `;
 
@@ -57,7 +57,7 @@ export const StyledTodoCopy = styled.p`
   font-weight: 300;
   font-size: 7px;
   line-height: 10px;
-  color: ${(props) => props.theme.textColor};
+  color: ${(props) => props.theme.color.text.textColor};
   margin-top: 13px;
 `;
 

@@ -17,7 +17,7 @@ export const StyledListHeader = styled.div`
     font-weight: 500;
     font-size: 10px;
     line-height: 15px;
-    color: ${(props) => props.theme.accentColor};
+    color: ${(props) => props.theme.color.accent};
   }
 
   span {
@@ -28,7 +28,7 @@ export const StyledListHeader = styled.div`
     justify-content: center;
     width: 18px;
     height: 18px;
-    color: ${(props) => props.theme.accentColor};
+    color: ${(props) => props.theme.color.accent};
     font-size: 8px;
     line-height: 12px;
   }
@@ -36,5 +36,5 @@ export const StyledListHeader = styled.div`
 
 export const StyledDivider = styled.hr`
   margin: 10px 0 20px 0;
-  border: 1.8px solid ${(props) => props.theme.accentColor};
+  border: 1.8px solid ${(props) => props.theme.color.accent};
 `;

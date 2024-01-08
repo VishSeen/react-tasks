@@ -8,7 +8,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: #ffd646;
+    background-color: ${props => props.theme.color.accent};
     border: none;
     border-radius: 50%;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
@@ -21,22 +21,26 @@ const StyledWrapper = styled.div`
 
     &:hover {
       cursor: pointer;
-      background-color: #dcc03e;
+      background-color:  ${props => props.theme.hover.fabBtn};
     }
+
+    &.rotate {
+    background-color: ${props => props.theme.background.fabBtnClose};
+
+    span {
+        transform: rotate(45deg);
+    }
+  }
   }
 
 
   .btn-fab span {
-    color: #323232;
+    color: ${props => props.theme.color.dark};
     font-size: 20px;
     font-weight: 600;
     transition: 0.2s ease-in all;
     @media screen and (min-width: 992px) {
         font-size: 28px;
-    }
-
-    &.rotate {
-        transform: rotate(45deg);
     }
   }
 `;

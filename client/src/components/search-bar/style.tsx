@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 const StyledSearch = styled.div<{ className?: string }>`
-    background-color: ${props => props.theme.backgroundSearchColor};
+    background-color: ${props => props.theme.background.searchBar};
     width: 100%;
     height: 34px;
     display: flex;
@@ -35,7 +35,7 @@ const StyledSearch = styled.div<{ className?: string }>`
         height: 100%;
         width: 100%;
         outline-width: 0px;
-        color:  ${props => props.theme.textColor};
+        color:  ${props => props.theme.color.text.textColor};
         font-size: 12px;
         font-family: 'Poppins', sans-serif;
         :focus-visible {

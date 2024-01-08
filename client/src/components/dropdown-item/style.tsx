@@ -5,7 +5,7 @@ const StyledDropdownItem = styled.div`
     border-radius: 5px;
     transition: 0.2s all ease-in-out;
     &:hover {
-        background-color: ${props => props.theme.hoverBackgroundColor};
+        background-color: ${props => props.theme.hover.dropdownItem};
     }
 
     button {
@@ -13,13 +13,13 @@ const StyledDropdownItem = styled.div`
         padding: 8px 12px;
         display: flex;
         align-items: center;
-        color: ${props => props.theme.textColor};
+        color: ${props => props.theme.color.text.textColor};
         opacity: 0.8;
 
         .icon {
             font-size: 18px;
             font-weight: bold;
-            color: ${props => props.theme.textColor};
+            color: ${props => props.theme.color.text.textColor};
             margin-right: 6px;
         }
 

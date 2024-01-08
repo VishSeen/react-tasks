@@ -2,12 +2,13 @@ import styled from 'styled-components';
 
 const StyledUserPanelInfo = styled.div`
     width: 100%;
-    box-shadow: ${props => props.theme.boxShadow};
+    background-color: ${props => props.theme.background.overlay};
+    box-shadow: ${props => props.theme.boxShadow.userPanel};
     display: none;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 18px;
-    border: 1px solid ${props => props.theme.borderColor};
+    border: 1px solid ${props => props.theme.color.border};
     padding: 10px;
     position: absolute;
     top: 63px;
@@ -47,7 +48,7 @@ const StyledUserPanelInfo = styled.div`
         .info {
             text-align: center;
             p {
-                color: ${props => props.theme.textColor};
+                color: ${props => props.theme.color.text.textColor};
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
@@ -55,7 +56,7 @@ const StyledUserPanelInfo = styled.div`
             }
 
             span {
-                color: ${props => props.theme.textColor};
+                color: ${props => props.theme.color.text.textColor};
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 300;
@@ -70,7 +71,7 @@ const StyledUserPanelInfo = styled.div`
     }
 
     .bottom-container {
-        border-top: 1px solid ${props => props.theme.borderColor};
+        border-top: 1px solid ${props => props.theme.color.border};
         padding-top: 5px;
 
         .dropdown-item__wrapper {

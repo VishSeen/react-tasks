@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
         }
 
         p {
-            color: ${props => props.theme.textColor};
+            color: ${props => props.theme.color.text.textColor};
             font-weight: 500;
             font-size: 14px;
             font-style: normal;
@@ -49,7 +49,7 @@ const StyledWrapper = styled.div`
         }
 
         span {
-            color: ${props => props.theme.textColor};
+            color: ${props => props.theme.color.text.textColor};
         }
     }
 

@@ -9,18 +9,18 @@ const ButtonFab: FunctionComponent<FabBtnProps> = ({
 }) => {
     const [fabClicked, setFabClicked] = useState<boolean>(false);
 
-    const onClick= () => {
+    const onClick = () => {
         setFabClicked(!fabClicked);
 
-        if(fabClicked) {
+        if (fabClicked) {
             setFabClicked(false);
         }
     }
 
     return (
-        <StyledWrapper className={['btn-fab-wrapper' , className].join(' ')}>
-            <button className="btn-fab" onClick={onClick}>
-                <span className={`material-symbols-rounded ${fabClicked ? 'rotate' : ''}`}>
+        <StyledWrapper className={['btn-fab-wrapper', className].join(' ')}>
+            <button className={`btn-fab ${fabClicked ? 'rotate' : ''}`} onClick={onClick}>
+                <span className={`material-symbols-rounded `}>
                     {icon}
                 </span>
             </button>

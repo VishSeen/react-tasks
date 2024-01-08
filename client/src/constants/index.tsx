@@ -4,3 +4,8 @@ export enum Tag {
     work = "work",
     important = "important"
 }
+
+export enum ButtonType {
+    filled = "filled",
+    outlined = 'outlined'
+}

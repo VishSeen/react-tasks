@@ -1,15 +1,44 @@
 import { Tag } from '../constants';
 
 export type Theme = {
+  color: Color;
+  background: Background;
+  hover: Hover;
+  boxShadow: BoxShadow;
+};
+
+export type Font = {
+  primary: string;
+  secondary: string;
+};
+export type BoxShadow = {
+  todoItem: string;
+  userPanel: string;
+  fabBtn: string;
+  dropdownOption: string;
+};
+export type Background = {
+  body: string;
+  navBar: string;
+  searchBar: string;
+  fabBtnClose: string;
+  overlay: string;
+};
+export type Color = {
+  white: string;
+  dark: string;
+  text: Text;
+  border: string;
+  accent: string;
+};
+export type Hover = {
+  fabBtn: string;
+  dropdownItem: string;
+  navMenuItem: string;
+};
+export type Text = {
   textColor: string;
   textColorDark: string;
-  backgroundColor: string;
-  backgroundNavColor: string;
-  backgroundSearchColor: string;
-  accentColor: string;
-  borderColor: string;
-  hoverBackgroundColor: string;
-  boxShadow: string;
 };
 
 export type Page = {

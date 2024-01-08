@@ -1,13 +1,9 @@
 import { styled } from 'styled-components';
 
 const StyledNav = styled.div`
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    bottom: 1rem;
     width: 257px;
     padding: 35px 20px;
-    background-color: #323232;
+    background-color: ${props => props.theme.background.navBar};
     border-radius: 19px;
     z-index: 10;
 
@@ -17,6 +13,16 @@ const StyledNav = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        &.btn-icon-nav {
+            button {
+                opacity: 1;
+            }
+
+            button span {
+                color: ${props => props.theme.background.white};
+            }
+        }
     }
 
     .nav-bar__top-bar {
@@ -32,7 +38,7 @@ const StyledNav = styled.div`
             padding: 4px;
 
             span {
-                color: #fff;
+                color: ${props => props.theme.color.dark};
             }
         }
     }

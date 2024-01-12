@@ -4,7 +4,6 @@ import { styled } from 'styled-components';
 const StyledButtonIcon = styled.div`
     border: none;
     color: ${props => props.theme.color.text.textColor};
-    opacity: 0.5;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -20,6 +19,7 @@ const StyledButtonIcon = styled.div`
         justify-content: center;
 
         span {
+            opacity: 0.5;
             color: ${props => props.theme.color.text.textColor};
         }
     }
